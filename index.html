@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+    
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+        .container {
+            font-family: "Oswald", serif;
+            font-weight: 100;
+        }   
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove a margem padrão */
+    background-color: #f8f8f8; /* Fundo para destaque */
+}
+
+    .container { 
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        background-color: rgba(190, 190, 190, 0.5); /* Fundo com opacidade de 50% */
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+    }
+    .header img {
+        background-color: gray;
+        width: 150px;
+        height: 150px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    .nomeevento{
+        margin: 10px 0px 10px 50px;
+    }
+
+
+.slider {
+    position: relative;
+    width: 95%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide {
+    flex: 1 0 calc(33.3333% - 10px); /* Três imagens por vez com espaçamento */
+    margin: 0 5px; /* Espaçamento entre as imagens */
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.anuncio{
+    font-size: 13px;
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+}
+.anuncio h2{
+    padding: 0px 15% 0px 15%;
+}
+.anuncio a{
+    background-color: gray;
+    padding: 2px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.nomeevento{
+    background-color: green;
+    padding: 10px;
+}
+#bold-line{
+    border: 2px solid rgb(70, 70, 70); /* Largura, estilo e cor */
+    width: 100%;
+}
+.patrocinadores h1{
+    display: flex;
+    text-align: start;
+    width: 100%;
+    background-color: #333;
+    padding: 5px;
+}
+.page{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.esquerda{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
+.esquerda h1{
+    text-align: start;
+}
+.esquerda h3{
+    text-align: center;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out; /* Animação de entrada */
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    text-align: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 5px;
+    transform: scale(1.1); /* Animação de leve crescimento */
+}
+
+/* Animação ao carregar */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+}
+
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="" alt="">
+            <div class="nomeevento">
+                <h1>Regional Aberto de Futsal - Copa Malharia PH Esportes 2024</h1>
+                <p>Futsal</p>
+            </div>
+        </div>
+        <div class="anuncio">
+            <h2>Arena7Pro: Simplificando a gestão de eventos e partidas de Fut7. Entre em contato conosco pelo número <a href="">(41) xxxx-xxxx</a> e leve seu jogo para o próximo nível!</h2>
+        </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">Arena7Pro</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Página Principal</a></li>
+                    <li><a href="#temporadas">Temporadas</a></li>
+                    <li><a href="#times">Times</a></li>
+                    <li><a href="#jogos">Jogos</a></li>
+                    <li><a href="#postagens">Postagens</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#noticias">Notícias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+        <hr id="bold-line">
+        <div class="patrocinadores">
+            <h1>PATROCINADORES</h1>
+        </div>
+        <div class="slider">
+            <div class="slides">
+                <!-- Cada imagem é parte de um slide conjunto -->
+                <div class="slide"><img src="https://via.placeholder.com/300x200?text=Imagem+1" alt="Imagem 1"></div>
+                <div class="slide"><img src="https://via.placeholder.com/300x200?text=Imagem+2" alt="Imagem 2"></div>
+                <div class="slide"><img src="https://via.placeholder.com/300x200?text=Imagem+3" alt="Imagem 3"></div>
+                <div class="slide"><img src="https://via.placeholder.com/300x200?text=Imagem+4" alt="Imagem 4"></div>
+                <div class="slide"><img src="https://via.placeholder.com/300x200?text=Imagem+5" alt="Imagem 5"></div>
+                <div class="slide"><img src="https://via.placeholder.com/300x200?text=Imagem+6" alt="Imagem 6"></div>
+            </div>
+            <!-- Botões de navegação -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <hr id="bold-line">
+        <div class="page">
+            <div class="esquerda">
+                <h3>Próximos jogos</h3>
+                <h1>Notícias</h1>
+            </div>
+            <div class="direita">
+                <div class="card">
+                    <h2>Participe dos nossos Campeonatos!</h2>
+                    <p>Inscreva-se agora e mostre seu talento no campo! Escolha uma opção abaixo para continuar.</p>
+                    <div class="buttons">
+                        <button>Consultar se já é cadastrado</button>
+                        <button>Compartilhar inscrição</button>
+                        <button>Registrar-se</button>
+                    </div>
+                    <div class="login-section">
+                        <p>Já é cadastrado? <a href="#">Faça login aqui</a></p>
+                    </div>
+                </div>
+                <div class="access-area">
+                    <h2>Área Exclusiva do Mesário</h2>
+                    <p>Bem-vindo! Aqui você pode acessar informações essenciais do campeonato.</p>
+                    <p>Insira seu código exclusivo abaixo para começar.</p>
+                    <input type="text" placeholder="Digite seu código exclusivo">
+                    <button>Acessar Informações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let currentIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    const visibleSlides = 3; // Número de imagens visíveis ao mesmo tempo
+    currentIndex = (index + totalSlides) % totalSlides; // Ajusta o índice
+
+    // Desliza o slider para mostrar o grupo correto de imagens
+    slides.style.transform = `translateX(-${currentIndex * (100 / visibleSlides)}%)`;
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+// Slide automático (opcional)
+setInterval(() => {
+    nextSlide();
+}, 5000); // Muda a cada 5 segundos
+
+    </script>
+</html>
