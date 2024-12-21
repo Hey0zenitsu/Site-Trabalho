@@ -1,131 +1,250 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-.container{
-    font-family: 'Open Sans';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
 }
-.esquerda{
-    margin: 10px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.direita{
+
+/* Parallax background */
+.parallax {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('img/fundo.jpg'); /* Substitua pela sua imagem */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-.card {
-    width: 95%;
-    max-width: 450px;
     padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: start;
-    margin-top: 10px;
 }
+/* Estilo do h1 - título de patrocinadores */
 
-.card h2 {
-    font-size: 1.5rem;
-    color: #e63946;
-    margin-bottom: 10px;
-}
-
-.card p {
-    font-size: 1rem;
-    margin: 15px 0;
-    color: #333;
-}
-
-.card .buttons {
+/* Header */
+.container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    align-items: center;
+
+}
+.header {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    background-color: rgba(80, 80, 80, 0.5);
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px 10px 0px 0px;
 }
 
-.card button {
-    background: #e63946;
+.logo img {
+    height: 120px;
+    width: auto;
+    vertical-align: bottom;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.header-text h1 {
+    background-color: #5de82a;
+    font-weight: 400;
+    font-size: 32px;
+    padding: 15px;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 18px;
+    color: #fff;
+}
+#teste {
+    background-color: #5de82a;
+    color: rgb(231, 231, 231);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    position: relative;
+    bottom: -0px; /* Ajuste a posição inicial fora da tela */
+    animation: subir 1s ease-out forwards, mudarCor 2s infinite; /* Animação de subida e mudança de cor */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombras para dar destaque */
+}
+
+@keyframes teste {
+    0% {
+        bottom: -50px; /* Começa ligeiramente fora da tela */
+        opacity: 0; /* Inicia invisível */
+    }
+    100% {
+        bottom: 20px; /* Posição final */
+        opacity: 1; /* Torna-se visível */
+    }
+}
+
+@keyframes mudarCor {
+    0% {
+        background-color: #4ec025;
+        color: rgb(212, 212, 212);
+        font-weight: 420;
+
+
+    }
+    50% {
+        background-color: #52cf24;
+        color: rgb(255, 255, 255);
+        font-weight: 550;
+    }
+    100% {
+        background-color: #4ec025;
+        color: rgb(212, 212, 212);
+        font-weight: 420;
+
+    }
+}
+.black{
+    text-align: start;
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 2px 10px 2px 10px;
+    text-align: center;
+    margin: 0px;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(80, 80, 80, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Container das imagens */
+.slides {
+    display: flex;
+    max-width: 1200px;
+    flex-wrap: nowrap; /* Força uma linha única */
+    transition: transform 0.5s ease-in-out; /* Animação suave para o movimento */
+    transform: translateX(0); /* Garante que o início esteja visível */
+    position: relative;
+    align-items: start;
+}
+
+/* Estilos das imagens */
+.slides img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0.7;
+    object-fit: cover;
+    margin: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.slides img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    margin: 15px;
+}
+
+/* Estilos dos botões */
+.button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
-.card button:hover {
-    background: #d62839;
+/* Hover nos botões */
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-.card .login-section {
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: #666;
+/* Botão anterior */
+.prev {
+    left: 10px;
 }
 
-.card .login-section a {
-    color: #e63946;
+/* Botão próximo */
+.next {
+    right: 10px;
+}
+
+@keyframes slide-back {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Seção de patrocínio */
+.patrocinadores {
+    text-align: start;
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+}
+.patrocinadores h1{
+    margin: 0px 20px 0px 40px;
+}
+.patrocinio {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+}
+.patrocinio a {
+    background-color: #5de82a;
+    padding: 10px 20px; /* Aumentei o padding para mais espaço ao redor do texto */
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    color: #404040; /* Cor do texto dentro do link */
+    display: inline-block; /* Faz o link se comportar como um botão */
+    transition: padding 0.3s ease, background-color 1s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
+    font-weight: 400;
 }
 
-.card .login-section a:hover {
-    text-decoration: underline;
+.patrocinio   a:hover {
+    animation: none;
+    margin-left: 1px;
+    background-color: #54c233; /* Cor de fundo mais escura no hover */
+    transform: scale(1.05); /* Aumenta o tamanho do botão */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao botão */
 }
-
-.access-area {
-    width: 95%; /* Ajusta a largura para caber em telas menores */
-    max-width: 400px; /* Largura máxima para evitar expansão excessiva */
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: start;
-    margin: 0 auto; /* Centraliza horizontalmente */
-    overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
-    margin-top: 10px;
-}
-
-.access-area h2 {
-    font-size: 1.5rem;
-    color: #1a73e8;
-    margin-bottom: 10px;
-}
-
-.access-area p {
-    font-size: 1rem;
-    margin: 15px 0;
-    color: #333;
-}
-
-.access-area input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-bottom: 15px;
-    outline: none;
-}
-
-.access-area input[type="text"]:focus {
-    border-color: #1a73e8;
-}
-
-.access-area button {
-    width: 100%;
-    padding: 10px;
-    background: #1a73e8;
+#teste:hover{
+    animation: none;
     color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-.access-area button:hover {
-    background: #155cb0;
+}
+.patrocinio h1 {
+    font-size: 22px;
+    font-weight: 400;
 }
