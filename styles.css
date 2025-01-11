@@ -1,639 +1,706 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 /* Parallax background */
 .parallax {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-image: url('img/fundo.jpg'); /* Substitua pela sua imagem */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url('img/fundo.jpg');
+  /* Substitua pela sua imagem */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
+
 /* Estilo do h1 - título de patrocinadores */
 
 /* Header */
-.container{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  align-items: center;
 
 }
+
 .header {
-    margin: 0;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    background-color: rgba(80, 80, 80, 0.5);
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 10px 10px 0px 0px;
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: rgba(80, 80, 80, 0.5);
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .logo img {
-    height: 120px;
-    width: auto;
-    vertical-align: bottom;
-    margin: 15px;
-    border-radius: 10px;
+  height: 120px;
+  width: auto;
+  vertical-align: bottom;
+  margin: 15px;
+  border-radius: 10px;
 }
 
 .header-text h1 {
-    background-color: #5de82a;
-    font-weight: 400;
-    font-size: 32px;
-    padding: 15px;
-    margin: 0;
+  background-color: #5de82a;
+  font-weight: 400;
+  font-size: 32px;
+  padding: 15px;
+  margin: 0;
 }
 
 .header-text p {
-    font-size: 18px;
-    color: #fff;
+  font-size: 18px;
+  color: #fff;
 }
+
 #teste {
-    background-color: #5de82a;
-    color: rgb(231, 231, 231);
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    width: 200px;
-    position: relative;
-    bottom: -0px; /* Ajuste a posição inicial fora da tela */
-    animation: subir 1s ease-out forwards, mudarCor 2s infinite; /* Animação de subida e mudança de cor */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombras para dar destaque */
+  background-color: #5de82a;
+  color: rgb(231, 231, 231);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  position: relative;
+  bottom: -0px;
+  /* Ajuste a posição inicial fora da tela */
+  animation: subir 1s ease-out forwards, mudarCor 2s infinite;
+  /* Animação de subida e mudança de cor */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /* Sombras para dar destaque */
 }
 
 @keyframes teste {
-    0% {
-        bottom: -50px; /* Começa ligeiramente fora da tela */
-        opacity: 0; /* Inicia invisível */
-    }
-    100% {
-        bottom: 20px; /* Posição final */
-        opacity: 1; /* Torna-se visível */
-    }
+  0% {
+    bottom: -50px;
+    /* Começa ligeiramente fora da tela */
+    opacity: 0;
+    /* Inicia invisível */
+  }
+
+  100% {
+    bottom: 20px;
+    /* Posição final */
+    opacity: 1;
+    /* Torna-se visível */
+  }
 }
 
 @keyframes mudarCor {
-    0% {
-        background-color: #4ec025;
-        color: rgb(212, 212, 212);
-        font-weight: 420;
+  0% {
+    background-color: #4ec025;
+    color: rgb(212, 212, 212);
+    font-weight: 420;
 
 
-    }
-    50% {
-        background-color: #52cf24;
-        color: rgb(255, 255, 255);
-        font-weight: 550;
-    }
-    100% {
-        background-color: #4ec025;
-        color: rgb(212, 212, 212);
-        font-weight: 420;
+  }
 
-    }
+  50% {
+    background-color: #52cf24;
+    color: rgb(255, 255, 255);
+    font-weight: 550;
+  }
+
+  100% {
+    background-color: #4ec025;
+    color: rgb(212, 212, 212);
+    font-weight: 420;
+
+  }
 }
-.black{
-    text-align: start;
-    display: flex;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 2px 10px 2px 10px;
-    text-align: center;
-    margin: 0px;
+
+.black {
+  text-align: start;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 2px 10px 2px 10px;
+  text-align: center;
+  margin: 0px;
 }
-.mySlides{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 250px;
+
+.mySlides {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 250px;
 }
+
 .slider {
-    width: 100%;
-    min-height: 250px;
-    max-height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background-color: rgba(80, 80, 80, 0.5);
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  min-height: 250px;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgba(80, 80, 80, 0.5);
+  overflow: hidden;
+  position: relative;
 }
 
 /* Container das imagens */
 .slides {
-    display: flex;
-    max-width: 1200px;
-    flex-wrap: nowrap; /* Força uma linha única */
-    transition: transform 0.5s ease-in-out; /* Animação suave para o movimento */
-    transform: translateX(0); /* Garante que o início esteja visível */
-    position: relative;
-    align-items: start;
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: nowrap;
+  /* Força uma linha única */
+  transition: transform 0.5s ease-in-out;
+  /* Animação suave para o movimento */
+  transform: translateX(0);
+  /* Garante que o início esteja visível */
+  position: relative;
+  align-items: start;
 }
 
 /* Estilos das imagens */
 .slides img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    opacity: 0.7;
-    object-fit: cover;
-    margin: 20px;
-    transition: all 0.3s ease-in-out;
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  opacity: 0.7;
+  object-fit: cover;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Efeito ao passar o mouse sobre a imagem */
 .slides img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-    margin: 15px;
+  transform: scale(1.1);
+  opacity: 1;
+  margin: 15px;
 }
 
 /* Estilos dos botões */
 .button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* Hover nos botões */
 .button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Botão anterior */
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
 /* Botão próximo */
 .next {
-    right: 10px;
+  right: 10px;
 }
 
 @keyframes slide-back {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
+
 /* Seção de patrocínio */
 .patrocinadores {
-    text-align: start;
-    display: flex;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    margin: 0px;
+  text-align: start;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 0px;
 }
-.patrocinadores h1{
-    margin: 0px 20px 0px 40px;
-    font-weight: 450;
+
+.patrocinadores h1 {
+  margin: 0px 20px 0px 40px;
+  font-weight: 450;
 }
+
 .patrocinio {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    text-align: center;
-    margin: 0px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin: 0px;
 }
+
 .patrocinio a {
-    background-color: #5de82a;
-    padding: 10px 20px; /* Aumentei o padding para mais espaço ao redor do texto */
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    color: #404040; /* Cor do texto dentro do link */
-    display: inline-block; /* Faz o link se comportar como um botão */
-    transition: padding 0.3s ease, background-color 1s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição */
-    font-weight: 400;
+  background-color: #5de82a;
+  padding: 10px 20px;
+  /* Aumentei o padding para mais espaço ao redor do texto */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #404040;
+  /* Cor do texto dentro do link */
+  display: inline-block;
+  /* Faz o link se comportar como um botão */
+  transition: padding 0.3s ease, background-color 1s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  /* Suaviza a transição */
+  font-weight: 400;
 }
 
-.patrocinio  a:hover {
-    animation: none;
-    margin-left: 1px;
-    background-color: #54c233; /* Cor de fundo mais escura no hover */
-    transform: scale(1.05); /* Aumenta o tamanho do botão */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adiciona sombra ao botão */
+.patrocinio a:hover {
+  animation: none;
+  margin-left: 1px;
+  background-color: #54c233;
+  /* Cor de fundo mais escura no hover */
+  transform: scale(1.05);
+  /* Aumenta o tamanho do botão */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  /* Adiciona sombra ao botão */
 }
-#teste:hover{
-    animation: none;
-    color: white;
+
+#teste:hover {
+  animation: none;
+  color: white;
 
 }
+
 .patrocinio h1 {
-    font-size: 22px;
-    font-weight: 400;
+  font-size: 22px;
+  font-weight: 400;
 }
 
-.page{
-    margin: 0;
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    background-color: rgba(80, 80, 80, 0.5);
-    text-transform: uppercase;
-    justify-content: space-between;
+.page {
+  margin: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  background-color: rgba(80, 80, 80, 0.5);
+  text-transform: uppercase;
+  justify-content: space-between;
 }
 
-.direita{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
+.direita {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
-    background: rgba(20, 20, 20, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 320px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s, background 0.3s;
-    margin: 10px 0px 10px 0px;
-  }
-#enviar{
-    margin: 10px 10px 10px 0px;
-    width: 90%;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+  margin: 0px 0px 20px 0px;
 }
-  .card:hover {
-    background: rgba(30, 30, 30, 0.95);
-  }
 
-  .card-header {
-    background: linear-gradient(135deg, #54c233, #63c346);
-    color: #fff;
-    text-align: center;
-    padding: 15px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+#enviar {
+  margin: 10px 10px 10px 0px;
+  width: 90%;
+}
 
-  .card-content {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
+.card:hover {
+  background: rgba(30, 30, 30, 0.95);
+}
 
-  .card-content p {
-    font-size: 1rem;
-    color: #ccc;
-    margin: 10px 0;
-  }
+.card-header {
+  background: linear-gradient(135deg, #54c233, #63c346);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
-  .card-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 
-  .card-button {
-    display: block;
-    padding: 10px;
-    background: rgba(84,194,51, 0.8);
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: background 0.3s, transform 0.2s;
-    text-align: center;
-  }
+.card-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 10px 0;
+}
 
-  .card-button:hover {
-    background: #235812;
-    transform: scale(1.05);
-  }
+.card-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
-  .card-login {
-    margin-top: 20px;
-    color: #ccc;
-    font-size: 1rem;
-  }
+.card-button {
+  display: block;
+  padding: 10px;
+  background: rgba(84, 194, 51, 0.8);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s, transform 0.2s;
+  text-align: center;
+}
 
-  .card-login a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px;
-    background: rgba(100, 181, 246, 0.8);
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
-  }
+.card-button:hover {
+  background: #235812;
+  transform: scale(1.05);
+}
 
-  .card-login a:hover {
-    background: #64b5f6;
-    transform: scale(1.05);
-  }
-  .token-input {
-    width: 90%;
-    padding: 10px;
-    font-size: 1rem;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
-    outline: none;
-    transition: background 0.3s, border-color 0.3s;
-  }
-  
-  .token-input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .token-input:focus {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: #ff5722;
-  }
-  .esquerda{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    margin: 0px 16px 10px 5px;
-  }
-  .esquerda img{
-    max-width: 100%;
-  }
-  .bodypage{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    background: rgba(20, 20, 20, 0.9);
-    width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s, background 0.3s;
-  }
-  .bodypage img{
-    width: 90%;
-  }
-  .post {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden; /* Garante que nada saia do container */
-    background: rgba(20, 20, 20, 0.9);
-    width: 95%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    transition: transform 0.3s, background 0.3s;
-    margin: 10px 0px 10px 10px;
-  }
-  
-  .image {
-    width: 100%;
-    height: auto; /* Garante que a imagem cubra todo o container */
+.card-login {
+  margin-top: 20px;
+  color: #ccc;
+  font-size: 1rem;
+}
 
-  }
-  
-  #resumo {
-    color: white;
-    font-size: 20px;
-    text-align: start;
-    margin: 10px;
-    position: absolute; /* Fica sobre a imagem */
-    top: 0;
-    left: 5%;
-    right: 5%;
-    transform: translate(-10%, 0);
-    opacity: 0; /* Começa invisível */
-    transition: opacity 0.7s ease; /* Transição suave para a visibilidade */
-  }
-  
-  .post:hover #resumo {
-    opacity: 1; /* Mostra o texto quando o hover estiver ativo */
-  }
- 
-  .post:hover .overlay2 {
-    height: 10%; /* A sobreposição vai cobrir 10% da altura do container */
-  }
+.card-login a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(100, 181, 246, 0.8);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
 
-    
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #008CBA;
-    width: 100%;
-    height: 0;
-    transition: .5s ease;
-  }
-  .overlay p{
-    margin: 0px;
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    background-color: white;
-    width: 100%;
+.card-login a:hover {
+  background: #64b5f6;
+  transform: scale(1.05);
+}
 
-  }
-  .post:hover .overlay {
-    height: 15%; /* A sobreposição vai cobrir 10% da altura do container */ 
-  }
-  
-  
-  .post img {
-    transition: opacity 0.7s ease; /* Transição suave de opacidade */
-    width: 100%;
-    height: 100%;
-    max-height: 750px;
-    min-width: 80%;
-  }
-  
-  .custom-text a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #ffffff; /* Cor dourada para o link */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    position: relative;
-    font-weight: 450;
-    padding: 5px 15px 5px 15px;
-    border-radius: 5px 5px 0px 0px;
-    transition: all 0.3s ease; /* Transição suave para todas as mudanças */
-  }
-  
-  .custom-text a::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #ff3131; /* Cor dourada para o efeito de sublinhado */
-    bottom: 0;
-    left: 0%;
-    transition: width 0.3s, left 0.3s;
-  }
-  
-  .custom-text a:hover {
-    color: #fff; /* Muda a cor do texto para branco */
-    background-color: #00000072; /* Fundo dourado no hover */
-  }
-  
-  .custom-text a:hover::before {
-    width: 100%; /* Expande o sublinhado para o tamanho do link */
-    left: 0;
-  }
-  
-  
-  .text p{
-    background-color: white;
-    margin: 0px;
-    padding: 0px 10px 0px 10px;
-  }
-  .text h3{
-    margin: 0px;
-    font-size: 20px;
-    font-weight: 450;
-    margin: 0px 10px 0px 10px;
+.token-input {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+  outline: none;
+  transition: background 0.3s, border-color 0.3s;
+}
 
-  }
-  .text {
-    white-space: nowrap;
-    width: 100%;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    text-align: start;
-    top: 20%;
-    left: 10%;
-    transform: translate(-10%, -10%);
-    transition: opacity 0.7s ease;
-  }
-  
-  .post:hover .text {
-    opacity: 1; /* Torna o texto visível no hover */
-  }
+.token-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
 
-  .custom-image {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-  
-  .custom-overlay {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Preto com 20% de opacidade */
-    height: 0;
-    transition: .5s ease;
-  }
-  
-  .post:hover .custom-overlay {
-    bottom: 15%;
-    height: 85%;
-  }
-  
-  .custom-text {
-    color: white;
-    font-size: 20px;
-    overflow: hidden;
-    margin: 3%;
-  }
-  
-  /* Custom Scrollbar */
+.token-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ff5722;
+}
+
+.esquerda {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  margin: 0px 16px 10px 5px;
+}
+
+.esquerda img {
+  max-width: 100%;
+}
+
+.bodypage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 20, 20, 0.9);
+  width: 98%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.bodypage img {
+  width: 90%;
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: rgba(20, 20, 20, 0.9);
+  width: 95%;
+  border-radius: 10px;
+  font-weight: 900;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  margin: 10px 0px 10px 10px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  /* Faz a imagem preencher o espaço sem distorção */
+}
+
+#resumo {
+  color: white;
+  font-size: 20px;
+  text-align: start;
+  margin: 10px;
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.post:hover #resumo {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+  overflow: hidden;
+  z-index: 2;
+  /* Overlay deve ficar acima do custom-overlay */
+}
+
+.overlay p {
+  margin: 0px;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  width: 100%;
+}
+
+.post:hover .overlay {
+  height: 15%;
+
+  /* A sobreposição cobre 15% da altura da imagem */
+}
+
+.post img {
+  transition: opacity 0.7s ease;
+  width: 100%;
+  height: 100%;
+  max-height: 750px;
+  min-width: 80%;
+}
+
+.custom-text a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  position: relative;
+  padding: 5px 15px;
+  border-radius: 5px 5px 0px 0px;
+  transition: all 0.3s ease;
+}
+
+.custom-text a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff3131;
+  bottom: 0;
+  left: 0%;
+  transition: width 0.3s, left 0.3s;
+}
+
+.custom-text a:hover {
+  color: #fff;
+  background-color: #00000072;
+}
+
+.custom-text a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.text p {
+  background-color: white;
+  margin: 0px;
+  padding: 0px 10px 0px 10px;
+}
+
+.text h3 {
+  margin: 0px;
+  font-size: 20px;
+  font-weight: 450;
+  margin: 0px 10px 0px 10px;
+}
+
+.text {
+  white-space: nowrap;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  text-align: start;
+  top: 15%;
+  left: 10%;
+  bottom: 10%;
+  transform: translate(-10%, 1%);
+  transition: opacity 0.9s ease;
+}
+
+.post:hover .text {
+  opacity: 1;
+}
+
+.custom-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.custom-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  font-weight: 400;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 0;
+  transition: .5s ease;
+  z-index: 1;
+  /* Custom overlay abaixo da overlay */
+}
+
+.custom-overlay a {
+  font-weight: 400;
+}
+
+.post:hover .custom-overlay {
+  top: 0;
+  /* Remove qualquer espaço superior */
+  height: 100%;
+  /* A sobreposição cobre 85% da altura da imagem */
+}
+
+.custom-text {
+  color: white;
+  font-size: 20px;
+  overflow: hidden;
+  margin: 3%;
+}
+
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-    background-color: #1e1e1e; /* Dark background for the track */
-    border-radius: 8px;
+  width: 12px;
+  /* Width of the scrollbar */
+  background-color: #1e1e1e;
+  /* Dark background for the track */
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(55, 55, 85, 0.9); /* Cor inicial do thumb */
-    border-radius: 8px;
-    border: 3px solid #222; /* Borda escura */
+  background-color: rgba(55, 55, 85, 0.9);
+  /* Cor inicial do thumb */
+  border-radius: 8px;
+  border: 3px solid #222;
+  /* Borda escura */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #888; /* Cor mais clara quando o mouse passa */
-    transition: background-color 0.9s ease; /* Transição suave de 0.9s */
+  background-color: #888;
+  /* Cor mais clara quando o mouse passa */
+  transition: background-color 0.9s ease;
+  /* Transição suave de 0.9s */
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #333; /* Slightly lighter background for the track */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle inner shadow */
+  background-color: #333;
+  /* Slightly lighter background for the track */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  /* Subtle inner shadow */
 }
 
-.footer{
+.footer {
   text-align: start;
-    display: flex;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 10px;
-    margin: 0px;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 10px;
+  margin: 0px;
 }
-.footer h5{
+
+.footer h5 {
   font-weight: 400;
   width: 100%;
-    font-size: 16px;
-    padding: 15px;
-    margin: 0;
+  font-size: 16px;
+  padding: 15px;
+  margin: 0;
 }
-.fe{
+
+.fe {
   width: 33%;
 }
+
 .menu-column {
   display: flex;
   flex-direction: column;
-  width: 200px; /* Largura fixa da coluna */
+  width: 200px;
+  /* Largura fixa da coluna */
   margin-left: 25px;
-  border-radius: 5px; /* Cantos arredondados */
+  border-radius: 5px;
+  /* Cantos arredondados */
 }
 
 .menu-column ul {
-  list-style-type: none; /* Remove os marcadores de lista */
+  list-style-type: none;
+  /* Remove os marcadores de lista */
   padding: 0;
   margin: 0;
 }
@@ -641,31 +708,44 @@ body {
 .menu-column li {
   display: flex;
   align-items: center;
-  margin: 10px 0; /* Espaçamento entre os links */
+  margin: 10px 0;
+  /* Espaçamento entre os links */
 }
-.menu-column img{
+
+.menu-column img {
   width: 20px;
 }
+
 .menu-column a {
   display: contents;
   align-items: center;
   justify-content: center;
-  color: #fff; /* Cor do texto */
-  text-decoration: none; /* Remove o sublinhado */
-  font-size: 13px; /* Tamanho da fonte */
-  display: block; /* Ocupa toda a largura do item */
-  padding: 5px; /* Espaçamento interno do link */
-  border-radius: 3px; /* Cantos arredondados nos links */
-  transition: background-color 0.3s ease; /* Transição suave */
+  color: #fff;
+  /* Cor do texto */
+  text-decoration: none;
+  /* Remove o sublinhado */
+  font-size: 13px;
+  /* Tamanho da fonte */
+  display: block;
+  /* Ocupa toda a largura do item */
+  padding: 5px;
+  /* Espaçamento interno do link */
+  border-radius: 3px;
+  /* Cantos arredondados nos links */
+  transition: background-color 0.3s ease;
+  /* Transição suave */
 }
 
 .menu-column a:hover {
-  background-color: #212121; /* Fundo ao passar o mouse */
+  background-color: #212121;
+  /* Fundo ao passar o mouse */
 }
-.fc{
+
+.fc {
   width: 33%;
 }
-.fd{
+
+.fd {
   width: 33%;
 
 }
